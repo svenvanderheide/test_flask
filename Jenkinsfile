@@ -9,7 +9,7 @@ pipeline {
     stage('SCM') {
       agent any
       environment {
-        FLASK_APP = 'index.py '
+        FLASK_APP = 'index.py'
       }
       steps {
         sh '''echo $(ls)
