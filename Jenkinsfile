@@ -11,6 +11,7 @@ pipeline {
       steps {
         sh '''echo $(ls)
 echo $(cat requirements.txt)
+echo $(pwd)
 pip install -r requirements.txt'''
       }
     }
