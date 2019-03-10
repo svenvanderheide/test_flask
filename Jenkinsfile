@@ -20,7 +20,7 @@ pipeline {
 echo $(cat requirements.txt)
 echo $(pwd)
 pip install -r requirements.txt
-flask run --host 0:0:0:0'''
+flask run --host=0.0.0.0'''
       }
     }
   }
