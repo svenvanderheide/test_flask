@@ -2,7 +2,8 @@ pipeline {
   agent {
     docker {
       image 'python:3.7'
-      args '-p 5000:5000'
+      args '''-p 5000:5000
+-p 50001:50001'''
     }
 
   }
