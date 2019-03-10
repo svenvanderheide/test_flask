@@ -12,13 +12,14 @@ pipeline {
       agent any
       environment {
         FLASK_APP = 'index.py'
+        host = '0.0.0.0'
       }
       steps {
         sh '''echo $(ls)
 echo $(cat requirements.txt)
 echo $(pwd)
 pip install -r requirements.txt
-flask run'''
+flask run '''
       }
     }
   }
