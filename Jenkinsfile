@@ -20,4 +20,7 @@ flask run'''
       }
     }
   }
+  environment {
+    e = '8080:8080'
+  }
 }
