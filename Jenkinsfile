@@ -9,7 +9,9 @@ pipeline {
     stage('SCM') {
       agent any
       steps {
-        sh 'pip install -r requirements.txt'
+        sh '''echo $(ls)
+echo $(cat requirements.txt)
+pip install -r requirements.txt'''
       }
     }
   }
