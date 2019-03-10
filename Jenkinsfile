@@ -8,11 +8,15 @@ pipeline {
   stages {
     stage('SCM') {
       agent any
+      environment {
+        FLASK_APP = 'index.py '
+      }
       steps {
         sh '''echo $(ls)
 echo $(cat requirements.txt)
 echo $(pwd)
-pip install -r requirements.txt'''
+pip install -r requirements.txt
+flask run'''
       }
     }
   }
