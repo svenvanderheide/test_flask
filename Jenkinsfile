@@ -7,12 +7,7 @@ pipeline {
   }
   stages {
     stage('SCM') {
-      agent {
-        docker {
-          image 'python:3.7'
-        }
-
-      }
+      agent any
       steps {
         sh 'pip install -r requirements.txt'
       }
